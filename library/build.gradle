@@ -42,17 +42,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.github.tiann:FreeReflection:3.1.0"
-    api 'me.weishu.exposed:exposed-xposedapi:0.4.5'
-}
-
-apply plugin: 'com.github.panpf.bintray-publish'
-
-publish {
-    userOrg = 'twsxtd'//
-    groupId = 'me.weishu'
-    artifactId = 'epic'
-    publishVersion = '0.11.1'
-    desc = 'Android Java AOP Method Hook (Dexposed on ART)'
-    website = 'https://github.com/tiann/epic'
+    implementation files('libs/exposed-xposedapi-0.4.5.jar')
 }
 
